@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhamad Farhan Khuwais | Curriculum Vitae</title>
-    <meta name="description" content="Curriculum Vitae of Muhamad Farhan Khuwais, a Software Programmer in Python and Odoo framework">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Curriculum Vitae of Muhamad Farhan Khuwais, an Odoo Developer and IT Programmer in Python and Odoo framework">
+    <meta name="author" content="Muhamad Farhan Khuwais">
     <link rel="stylesheet" href="css/kube.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/custom.min.css" />
@@ -17,6 +16,79 @@
 		.intro h1:before {
 			/* Edit this with your name or anything else */
 			content: 'FARHAN';
+		}
+		.intro .roles {
+			color: #8c8c8c;
+			margin: 5px 0 0 0;
+		}
+		.contact-info {
+			list-style: none;
+			margin: 10px 0 0 0;
+			padding: 0;
+		}
+		.contact-info li {
+			display: inline-block;
+			list-style: none;
+			margin-right: 18px;
+			color: #8c8c8c;
+		}
+		.contact-info i.fa {
+			margin-right: 4px;
+		}
+		.work-list li b {
+			font-size: 1.1875em;
+			font-weight: 700;
+			color: #4d4d4d;
+		}
+		.subsection-title {
+			margin-top: 40px;
+			margin-bottom: 20px;
+			font-size: 1.5em;
+		}
+		.lang-switch {
+			float: right;
+			margin-right: 0;
+		}
+		.lang-switch a,
+		.lang-switch .sep {
+			display: inline-block;
+		}
+		.lang-switch a {
+			padding: 0 3px;
+			color: #a7a7a7;
+		}
+		.lang-switch a.active {
+			color: #4d4d4d;
+			font-weight: 700;
+		}
+		.lang-switch .sep {
+			color: #a7a7a7;
+			padding: 0 2px;
+		}
+		@media only screen and (min-width: 768px) {
+			.item-nav ul {
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: baseline;
+				justify-content: space-between;
+			}
+			.item-nav ul li {
+				float: none;
+				margin: 0;
+				white-space: nowrap;
+			}
+			.lang-switch {
+				float: none;
+			}
+		}
+		@media only screen and (max-width: 767px) {
+			.lang-switch {
+				float: none;
+			}
+			.contact-info li {
+				display: block;
+				margin-right: 0;
+			}
 		}
 	</style>
 </head>
@@ -30,12 +102,15 @@
 				</div>
 			    <nav id="navbar-1" class="navbar item-nav">
 				    <ul>
-				        <li class="active"><a href="#about">About</a></li>
-				        <li><a href="#experiences">Experiences</a></li>
-				        <li><a href="#educations">Education</a></li>
-				        <li><a href="#achievements">Achievements</a></li>
-				        <li><a href="#skills">Skills</a></li>
-				        <li><a href="./src/CV-Muhamad-Farhan-Khuwais_Odoo-Developer.pdf" download class="download-btn" target="_blank">Download CV</a></li>
+				        <li class="active"><a href="#about" data-i18n="nav.about">Tentang</a></li>
+				        <li><a href="#experiences" data-i18n="nav.experiences">Pengalaman</a></li>
+				        <li><a href="#educations" data-i18n="nav.education">Pendidikan</a></li>
+				        <li><a href="#achievements" data-i18n="nav.certificates">Sertifikasi</a></li>
+				        <li><a href="#skills" data-i18n="nav.skills">Keahlian</a></li>
+				        <li><a href="./src/CV_Muhamad_Farhan_Khuwais.pdf" download class="download-btn" target="_blank" data-i18n="nav.download">Unduh CV</a></li>
+				        <li class="lang-switch">
+				        	<a href="javascript:void(0)" data-setlang="id" class="active">ID</a><span class="sep">/</span><a href="javascript:void(0)" data-setlang="en">EN</a>
+				        </li>
 				    </ul>
 				</nav>
 			</header>
@@ -45,57 +120,100 @@
 	<!-- Introduction -->
 	<div class="intro section" id="about">
 		<div class="container">
-			<p>Hi, I’m Muhamad Farhan Khuwais</p>
+			<p data-i18n="intro.hi">Hai, saya Muhamad Farhan Khuwais</p>
 			<div class="units-row units-split wrap">
 				<div class="unit-20">
-					<img src="img/foto-portos.jpg" alt="Avatar">
+					<img src="img/foto-portos.jpg" alt="Foto Muhamad Farhan Khuwais">
 				</div>
 				<div class="unit-80">
-					<h1>I live in<br><span id="typed"></span></h1>
+					<h1><span data-i18n="intro.live">Saya tinggal di</span><br><span id="typed"></span></h1>
+					<p class="roles" data-i18n="intro.roles">Odoo Developer | IT Programmer | IT Support | Admin dan Office</p>
 				</div>
-				<p><div class="text"><p> I like to learn something new, want to learn to overcome challenges and have a great interest in the Information Technology and Graphic Design.<br/><br/>
-				Now I work at PT. Invosa Systems as Odoo Developer, carries out the application development process, cooperates with other parties if it is necessary to integrate the application, application support, create and custom modules, analyze the problems faced by users based on reports from the support department, find the root cause of the problem. encountered and make improvements to these problems.</div></p>
 			</div>
+			<p data-i18n="intro.about">Professional IT dengan 4+ tahun pengalaman sebagai Odoo Developer (Python), serta latar belajar IT, administrasi data, dan pengelolaan toko online. Lulusan S1 Informatika yang terbiasa menyelesaikan masalah pengguna, merapikan proses kerja, dan berkoordinasi lintas bagian. Siap berkontribusi sebagai programmer, IT support, maupun admin.</p>
+			<ul class="contact-info">
+				<li><i class="fa fa-map-marker"></i><span data-i18n="contact.location">Kota Bengkulu, Bengkulu, Indonesia</span></li>
+				<li><i class="fa fa-phone"></i><a href="tel:+628966864008">0896 6864 008</a></li>
+				<li><i class="fa fa-envelope"></i><a href="mailto:farhankhuwais28@gmail.com">farhankhuwais28@gmail.com</a></li>
+				<li><i class="fa fa-linkedin"></i><a href="https://linkedin.com/in/farhankhuwais" target="_blank">linkedin.com/in/farhankhuwais</a></li>
+			</ul>
 		</div>
 	</div>
 
 	<!-- Work Experience -->
 	<div class="work section second" id="experiences">
 		<div class="container">
-			<h1>Work Experiences</h1>
+			<h1 data-i18n="work.title">Pengalaman Kerja</h1>
 			<ul class="work-list">
-				<li>01/2024 - Present</li>
-				<li><a href="https://invosa.com" target="_blank">PT Invosa System</a></li>
-				<li>Odoo Developer</li>
+				<li data-i18n="work.job1.date">01/2024 - Sekarang</li>
+				<li><a href="https://invosa.com" target="_blank" data-i18n="work.job1.company">Inovasia Systems, Cibitung</a></li>
+				<li data-i18n="work.job1.role">Odoo Developer</li>
 				<p>
-					&middot; Developed a new module to streamline the tracking within Odoo for improved efficiency. <br/>
-					&middot; Proficient in the fundamentals of the Python programming language and the use of Git. <br/>
-					&middot; Provided basic user guidance on how to use the developed modules. <br/>
-					&middot; Investigated and resolved simple issues such as module errors or display glitches. <br/>
+					&middot; <span data-i18n="work.job1.b1">Membangun modul Odoo baru untuk pelacakan (tracking) agar proses kerja lebih efisien.</span> <br/>
+					&middot; <span data-i18n="work.job1.b2">Menangani laporan dari tim support, memastikan akar masalah, dan memperbaiki error modul serta masalah tambahan.</span> <br/>
+					&middot; <span data-i18n="work.job1.b3">Berkoordinasi dengan pihak lain untuk integrasi aplikasi dan memberi panduan penggunaan modul kepada pengguna.</span> <br/>
 				</p>
 			</ul>
 			<ul class="work-list">
-				<li>07/2022 - 04/2024</li>
-				<li><a href="#" target="_blank">PT Rumah Solusi Digital International</a></li>
-				<li>Odoo Developer</li>
+				<li data-i18n="work.job2.date">07/2022 - 04/2024</li>
+				<li><span data-i18n-html="work.job2.company">PT. Rumah Solusi Digital Internasional, Jakarta Selatan</span></li>
+				<li data-i18n="work.job2.role">Odoo Developer</li>
 				<p>
-					&middot; Developed a new module to streamline the tracking within Odoo for improved efficiency. <br/>
-					&middot; Installed and configured Odoo on servers, including user management and access rights. <br/>
-					&middot; Provided basic user guidance on how to use the developed modules. <br/>
-					&middot; Proficient in the fundamentals of the Python programming language and the use of Git. <br/>
-					&middot; Investigated and resolved simple issues such as module errors or display glitches. <br/>
+					&middot; <span data-i18n="work.job2.b1">Membangun modul Odoo untuk pelacakan (tracking) yang mempermudah pekerjaan pengguna.</span> <br/>
+					&middot; <span data-i18n="work.job2.b2">Menginstal dan mengonfigurasi Odoo di server, termasuk manajemen pengguna dan hak akses.</span> <br/>
+					&middot; <span data-i18n="work.job2.b3">Menyesuaikan masalah modul dan tambahan serta memberi panduan penggunaan kepada pengguna.</span> <br/>
 				</p>
 			</ul>
 			<ul class="work-list">
-				<li>05/2021 - 06/2022</li>
-				<li><a href="https://mitra10.com" target="_blank">PT Catur Mitra Sejati Sentos (Mitra 10)</a></li>
-				<li>Sosial Media Officer</li>
+				<li data-i18n="work.job3.date">05/2021 - 06/2022</li>
+				<li><a href="https://mitra10.com" target="_blank" data-i18n="work.job3.company">Mitra10, Kota Tangerang</a></li>
+				<li data-i18n="work.job3.role">Social Media Officer</li>
 				<p>
-					&middot; Manage (Handle) platform market place online shop Mitra10. <br/>
-					&middot; Manage Social Media platform (Story, Feeds, etc). <br/>
-					&middot; Re-design content for share to public as the identity store. <br/>
-					&middot; Making content videos for promotions store, sale, and the other events store Mitra10. <br/>
-					&middot; Coordinate with admin, Warehouse, sales for maintain order from customer. <br/>
+					&middot; <span data-i18n="work.job3.b1">Mengelola toko online Mitra10 di marketplace dan akun media sosial (story, feed).</span> <br/>
+					&middot; <span data-i18n="work.job3.b2">Berkoordinasi dengan admin, gudang, dan sales agar pesanan pelanggan berjalan lancar.</span> <br/>
+					&middot; <span data-i18n="work.job3.b3">Membuat dan mendesain ulang konten foto dan video untuk promosi toko, penjualan, dan acara.</span> <br/>
+				</p>
+			</ul>
+			<ul class="work-list">
+				<li data-i18n="work.job4.date">01/2020 - 05/2021</li>
+				<li><span data-i18n-html="work.job4.company">Cahaya Digital Asia, Jakarta Selatan</span></li>
+				<li data-i18n="work.job4.role">TIBCO Developer</li>
+				<p>
+					&middot; <span data-i18n="work.job4.b1">Memastikan sistem TIBCO Administrator tetap sehat (machine, engine, real time, multidim) melalui MobaXterm.</span> <br/>
+					&middot; <span data-i18n="work.job4.b2">Mengembangkan TIBCO BusinessWorks: operasi file dan database (DBC), XPath, schema, HTTP, penanganan error, REST API.</span> <br/>
+				</p>
+			</ul>
+
+			<h2 class="subsection-title" data-i18n="work.other.title">IT Support dan Pengalaman Lain</h2>
+			<ul class="work-list">
+				<li data-i18n="work.other.o1.date">Feb 2016 - Apr 2016</li>
+				<li><b data-i18n="work.other.o1.company">IT Support Technician &mdash; Pengadilan Agama Depok</b></li>
+				<p>
+					&middot; <span data-i18n="work.other.o1.b1">Troubleshooting jaringan dan hardware.</span> <br/>
+					&middot; <span data-i18n="work.other.o1.b2">Instalasi OS dan software.</span> <br/>
+					&middot; <span data-i18n="work.other.o1.b3">Entry data.</span> <br/>
+				</p>
+			</ul>
+			<ul class="work-list">
+				<li data-i18n="work.other.o2.date">Jan 2016 - Feb 2016</li>
+				<li><b data-i18n="work.other.o2.company">IT Support Technician &mdash; Gaanak Computer</b></li>
+				<p>
+					&middot; <span data-i18n="work.other.o2.b1">Instalasi OS dan software.</span> <br/>
+					&middot; <span data-i18n="work.other.o2.b2">Troubleshooting hardware.</span> <br/>
+				</p>
+			</ul>
+			<ul class="work-list">
+				<li data-i18n="work.other.o3.date">Feb 2020</li>
+				<li><b data-i18n="work.other.o3.company">System Support Engineer &mdash; Apetnik Nurica Farma</b></li>
+				<p>
+					&middot; <span data-i18n="work.other.o3.b1">Membuat program berbasis desktop.</span> <br/>
+				</p>
+			</ul>
+			<ul class="work-list">
+				<li data-i18n="work.other.o4.date">2018 - 2021</li>
+				<li><b data-i18n="work.other.o4.company">Graphic Designer &mdash; Wiraswasta</b></li>
+				<p>
+					&middot; <span data-i18n="work.other.o4.b1">Desain produk, banner, poster, logo, feed Instagram, undangan.</span> <br/>
 				</p>
 			</ul>
 		</div>
@@ -104,16 +222,16 @@
 	<!-- Education -->
 	<div class="education section second" id="educations">
 		<div class="container">
-			<h1>Educations</h1>
+			<h1 data-i18n="edu.title">Pendidikan</h1>
 			<ul class="education-list list-flat">
-				<li>2016 - 2020</li>
-				<li><b>Bachelor of Informatics Engineering</b></li>
-				<li>Universitas Indraprasta PGRI - Bachelor's degree</li>
+				<li data-i18n="edu.e1.date">2016 - 2020</li>
+				<li><b data-i18n="edu.e1.degree">Sarjana (S1) Informatika</b></li>
+				<li data-i18n-html="edu.e1.school">Universitas Indraprasta PGRI (UNINDRA)</li>
 			</ul>
 			<ul class="education-list list-flat">
-				<li>2013 - 2016</li>
-				<li><b>Computer Network Engineering</b></li>
-				<li>SMK Negeri 3 Depok - Vocational High School</li>
+				<li data-i18n="edu.e2.date">2013 - 2016</li>
+				<li><b data-i18n="edu.e2.degree">Teknik Komputer dan Jaringan</b></li>
+				<li data-i18n-html="edu.e2.school">SMK Negeri 3 Depok</li>
 			</ul>
 		</div>
 	</div>
@@ -121,25 +239,28 @@
 	<!-- Award & Achievements -->
 	<div class="award section second" id="achievements">
 		<div class="container">
-			<!-- <h1>Award &amp;<br>Achievements</h1> -->
-			<h1>Certificates</h1>
+			<h1 data-i18n="cert.title">Sertifikasi &amp; Publikasi</h1>
 			<ul class="award-list list-flat">
-				<li>05/2021 - 01/2023</li>
-				<li><b>Kelas Umum Gojek Program Digital Enterpreneur Academy</b></li>
-				<li>Digital Talent Scholarship</li>
-				<li>ID Kredensial 07720105121-70/DTS.DEA/BLSDM.KOMINFO/05/2021</li>
+				<li data-i18n="cert.c1.date">05/2021 - 01/2023</li>
+				<li><b data-i18n="cert.c1.name">Kelas Umum Gojek Program Digital Entrepreneur Academy</b></li>
+				<li data-i18n="cert.c1.issuer">Digital Talent Scholarship</li>
+				<li data-i18n="cert.c1.credential">ID Kredensial 07720105121-70/DTS.DEA/BLSDM.KOMINFO/05/2021</li>
 			</ul>
 			<ul class="award-list list-flat">
-				<li>09/2019 - 09/2022</li>
-				<li><b>Programming And Software Development</b></li>
-				<li>Badan Nasional Sertifikasi Profesi</li>
-				<li>ID Kredensial No. Reg. ICT 294 00013634 2019</li>
+				<li data-i18n="cert.c2.date">09/2019 - 09/2022</li>
+				<li><b data-i18n="cert.c2.name">Pemrograman dan Pengembangan Perangkat Lunak - Junior Web Programmer</b></li>
+				<li data-i18n="cert.c2.issuer">Badan Nasional Sertifikasi Profesi</li>
+				<li data-i18n="cert.c2.credential">ID Kredensial No. Reg. ICT 294 00013634 2019</li>
 			</ul>
 			<ul class="award-list list-flat">
-				<li>09/2019 - 09/2022</li>
-				<li><b>Operation And System Development</b></li>
-				<li>Badan Nasional Sertifikasi Profesi</li>
-				<li>ID Kredensial No. Reg. ICT 294 00015441 2019</li>
+				<li data-i18n="cert.c3.date">09/2019 - 09/2022</li>
+				<li><b data-i18n="cert.c3.name">Operation and System Tools - Junior Office Operator</b></li>
+				<li data-i18n="cert.c3.issuer">Badan Nasional Sertifikasi Profesi</li>
+				<li data-i18n="cert.c3.credential">ID Kredensial No. Reg. ICT 294 00015441 2019</li>
+			</ul>
+			<ul class="award-list list-flat">
+				<li data-i18n="cert.pub.label">Publikasi</li>
+				<li><b data-i18n="cert.pub.title">Pengembangan Sistem Transaksi Penjualan Barang Elektronik pada Toko Aneka Jaya Sparepart</b></li>
 			</ul>
 		</div>
 	</div>
@@ -147,18 +268,26 @@
 	<!-- Technical Skills -->
 	<div class="skills section second" id="skills">
 		<div class="container">
-			<h1>Technical<br>Skills</h1>
+			<h1 data-i18n="skills.title">Keahlian</h1>
 			<ul class="skill-list list-flat">
-				<li>Web Technology</li>
-				<li>HTML / CSS / Python / Java</li>
+				<li data-i18n="skills.programmer.label">Programmer</li>
+				<li data-i18n="skills.programmer.items">Python, Odoo, Enterprise Resource Planning (ERP), pengembangan dan kustomisasi modul, Git, REST API, XPath.</li>
 			</ul>
 			<ul class="skill-list list-flat">
-				<li>Database</li>
-				<li>MySQL / PostgreSQL</li>
+				<li data-i18n="skills.support.label">IT Support</li>
+				<li data-i18n="skills.support.items">Instalasi OS dan software, troubleshooting hardware dan jaringan, instalasi dan konfigurasi server Odoo, manajemen pengguna dan hak akses, panduan pengguna.</li>
 			</ul>
 			<ul class="skill-list list-flat">
-				<li>Framework</li>
-				<li>Odoo / Docker</li>
+				<li data-i18n="skills.admin.label">Admin dan Office</li>
+				<li data-i18n="skills.admin.items">Entry data, pengelolaan toko online dan pesanan pelanggan, koordinasi dengan admin, gudang, dan sales, sistem transaksi penjualan.</li>
+			</ul>
+			<ul class="skill-list list-flat">
+				<li data-i18n="skills.ai.label">AI dan Otomasi</li>
+				<li data-i18n="skills.ai.items">Berbagai model AI (LLM), integrasi API AI ke dalam kode, pemanfaatan AI untuk mempercepat pekerjaan.</li>
+			</ul>
+			<ul class="skill-list list-flat">
+				<li data-i18n="skills.design.label">Desain dan Konten</li>
+				<li data-i18n="skills.design.items">Inkscape, konten foto dan video, media sosial.</li>
 			</ul>
 		</div>
 	</div>
@@ -166,7 +295,7 @@
 	<!-- Quote -->
 	<div class="quote">
 		<div class="container text-centered">
-			<h1>Every lesson is an opportunity to grow and develop.</h1>
+			<h1 data-i18n="quote.text">Setiap pelajaran adalah kesempatan untuk tumbuh dan berkembang.</h1>
 		</div>
 	</div>
 
@@ -174,12 +303,11 @@
 		<div class="container">
 			<div class="units-row">
 			    <div class="unit-50">
-			    	<p>© 2025 All rights reserved</p>
+			    	<p data-i18n="footer.rights">&copy; 2026 All rights reserved</p>
 			    </div>
 			    <div class="unit-50">
 					<ul class="social list-flat right">
 						<li><a href="mailto:farhankhuwais28@gmail.com" target="_blank"><i class="fa fa-send"></i></a></li>
-						<li><a href="http://twitter.com/farhankhuwais" target="_blank"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="http://linkedin.com/in/farhankhuwais" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 						<li><a href="http://github.com/farhankhuwais" target="_blank"><i class="fa fa-github"></i></a></li>
 					</ul>
@@ -193,10 +321,11 @@
 	<script src="js/typed.min.js"></script>
     <script src="js/kube.min.js"></script>
     <script src="js/site.js"></script>
+    <script src="js/i18n.js"></script>
     <script>
 		function newTyped(){}$(function(){$("#typed").typed({
 		// Change to edit type effect
-		strings: ["Depok City", "West Java", "Indonesia"],
+		strings: ["Kota Bengkulu", "Bengkulu", "Indonesia"],
 
 		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
     </script>
